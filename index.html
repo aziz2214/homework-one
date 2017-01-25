@@ -1,0 +1,116 @@
+
+
+<head> 
+    <title> The Rainbox  </title>
+    
+      
+    <style> 
+        
+        * { 
+            margin: 0px; 
+            padding: 0px;
+        }
+        .fullscreen { 
+            padding:none;
+            height: 100vh; 
+            width: 100vw; 
+            background-color:white; 
+        }
+        
+        .box { 
+            padding: 0px; 
+            margin: 0px; 
+            
+            height: 20vh;
+            width: 20vw; 
+            
+            background-color: lightgrey; 
+            display:inline-block; 
+            transition: all .5s ease-in-out; 
+            
+            border-radius: ; 
+            float:left; 
+            
+        }
+        .box:hover { transform: scale(1.05);
+            background-color: blueviolet; 
+        }
+
+    </style>
+    
+    
+    <!-- JQUERY CDN IMPORT --> 
+        <script
+          src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  
+
+</head> 
+
+<body> 
+  
+    
+    <div class="fullscreen"> 
+        
+        <div class="box" id="rainbox" > </div>
+        <div class="box" id="rainbox" >  </div>
+        <div class="box" id="rainbox" >  </div>
+        <div class="box" id="rainbox" >  </div>
+        <div class="box" id="rainbox" >  </div>
+        <div class="box" id="rainbox" >  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+                <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        <div class="box">  </div>
+        
+        
+        
+    
+    </div>
+    
+     <script>
+         
+      
+
+     function rg(m, n) {
+        return Math.floor( Math.random() * (n - m + 1) ) + m;
+    }
+
+    function hex(i) {
+        return i.toString(16);
+    }
+
+    function randColor() {
+        return '#' + hex(rg(1, 15)) + hex(rg(1, 15)) + hex(rg(1, 15)) +
+            hex(rg(1, 15)) + hex(rg(1, 15)) + hex(rg(1, 15));
+    }
+
+    $(".box").mouseenter(function() {
+        $(this).css("background-color",randColor());
+    });
+    
+    $(".box").mouseleave(function() {
+        $(this).css("background-color", 'lightgrey');
+    });
+    
+         
+    </script>
+
+</body> 
+
